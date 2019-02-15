@@ -1,0 +1,55 @@
+<head>
+  <meta charset="utf-8" />
+  <!--Import Google Icon Font-->
+  <link
+    href="https://fonts.googleapis.com/icon?family=Material+Icons"
+    rel="stylesheet"
+  />
+  <!--Import materialize.css-->
+  <link
+    type="text/css"
+    rel="stylesheet"
+    href="css/materialize.min.css"
+    media="screen,projection"
+  />
+
+  <!--Let browser know website is optimized for mobile-->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#000000" />
+  <link rel="manifest" href="manifest.json" />
+  <link rel="shortcut icon" href="Emojione1_1F3B1.svg.png" />
+  <link
+    rel="apple-touch-startup-image"
+    sizes="512x512"
+    href="Emojione1_1F3B1.svg.png"
+  />
+  <!-- Tell the browser it's a PWA -->
+  <meta name="mobile-web-app-capable" content="yes" />
+  <!-- Tell iOS it's a PWA -->
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <title>React App</title>
+</head>
+
+<body>
+  <form id="myForm">
+      <div class="card-panel teal lighten-2">
+    <p><input placeholder="enter your question" /></p>
+    <p id="response">hello there world!</p>
+    <button type="submit" class="waves-effect waves-light btn">Ask the magic 8 ball</button>
+        </div>
+    <!--<button type="submit">Ask the magic 8 ball</button>-->
+  </form>
+  <script>
+    document
+      .getElementById("myForm")
+      .addEventListener("submit", function(event) {
+        let aChoices = ["certainly", "very likely", "no"];
+        let nChoice = Math.floor(Math.random() * aChoices.length);
+        document.getElementById("response").innerHTML = aChoices[nChoice];
+
+        event.preventDefault();
+      });
+  </script>
+  <!--JavaScript at end of body for optimized loading-->
+  <script type="text/javascript" src="js/materialize.min.js"></script>
+</body>
