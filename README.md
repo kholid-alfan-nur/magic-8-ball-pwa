@@ -14,14 +14,14 @@ npm run start (this will run the web app in localhost)
 - go to  https://firebase.google.com/  and create a firebase account with your google login
 -on CLI in VSCode:
 $npm install -g firebase-tools
-<enter yes in the options that appears>
+--enter yes in the options that appears--
 $firebase login
 $firebase init
-<enter yes>
-<select Hosting in the options>
-<create a new project>
-<build>
-<yes>
+--enter yes--
+--select Hosting in the options--
+--create a new project--
+--build--
+--yes--
 $firebase use --add
-<alias is "production">
+--alias is "production"--
 $firebase deploy
